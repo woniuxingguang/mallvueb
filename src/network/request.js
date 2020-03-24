@@ -13,7 +13,7 @@ export function request(config){
     }, err => {
 
     })
-    //2.2响应拦截
+    //2.2响应拦截,可以对请求的数据进行一步过滤，返回真正想要的数据
     instance.interceptors.response.use(res => {
         return res.data
     },err => {
