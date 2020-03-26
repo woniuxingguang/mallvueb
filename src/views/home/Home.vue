@@ -3,14 +3,16 @@
         <nav-bar class="home-nav">
             <div slot="center">首页</div>
         </nav-bar>
-        <home-swiper></home-swiper>
+        <home-swiper :banners="banners"/>
         <h1>首页</h1>
+
     </div>
 </template>
 
 <script>
-    import NavBar from 'components/common/navbar/NavBar'
+    import NavBar from 'components/common/navbar/NavBar';
     import HomeSwiper from "./childComps/HomeSwiper";
+
     import { getHomeMultidata } from "../../network/home";
 
     export default {
@@ -40,4 +42,6 @@
         background: var(--color-tint);
         color: #fff;
     }
+
+
 </style>
